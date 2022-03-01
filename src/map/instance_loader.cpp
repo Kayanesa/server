@@ -37,7 +37,7 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 #include "utils/mobutils.h"
 #include "utils/zoneutils.h"
 
-extern Sql_t* SqlHandle;
+extern thread_local Sql_t* SqlHandle;
 
 CInstanceLoader::CInstanceLoader(uint16 instanceid, CCharEntity* PRequester)
 {

@@ -56,7 +56,8 @@ login_config_t login_config; // main settings
 version_info_t version_info;
 maint_config_t maint_config;
 
-Sql_t*      SqlHandle = nullptr;
+thread_local Sql_t* SqlHandle = nullptr;
+
 std::thread messageThread;
 std::thread consoleInputThread;
 
